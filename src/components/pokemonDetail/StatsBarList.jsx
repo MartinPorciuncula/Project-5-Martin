@@ -10,8 +10,6 @@ const StatsBarList = ({ stats, types, abilities, moves }) => {
     setChangeState(e);
   };
 
-  console.log(changeState);
-
   return (
     <section className="grid grid-cols-3 place-items-center overflow-hidden gap-2">
       <button
@@ -40,7 +38,7 @@ const StatsBarList = ({ stats, types, abilities, moves }) => {
         <div
           className={`${
             changeState === "stats" ? "left-0" : "-translate-x-[1000px]"
-          } transition-transform w-full flex flex-col gap-2 p-2 min-[600px]:gap-4 duration-500`}
+          } transition-transform w-full flex flex-col gap-2 p-2 duration-500`}
         >
           {stats?.map((stat) => (
             <BarProgresStats key={stat.name} stat={stat} types={types} />
